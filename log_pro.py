@@ -3,6 +3,7 @@
 import psycopg2
 import datetime as u_day
 
+
 def err():
     quiry = """CREATE or replace VIEW e_c AS
             SELECT time::timestamp::date AS date,
@@ -49,6 +50,7 @@ def pop_article():
         print("{} - {} views".format(answ[i][0], answ[i][1]))
     return answ
 
+
 def run_query(quiry, temp=1):
     database, curs = connection()
     answ = None
@@ -58,6 +60,7 @@ def run_query(quiry, temp=1):
     database.commit()
     database.close()
     return answ
+
 
 def pop_author():
     quiry = """CREATE or replace VIEW pop_art AS
@@ -92,14 +95,17 @@ def pop_author():
         print("{} - {} views".format(answ[i][0], answ[i][1]))
     return answ
 
+
 def connection(data_name="news"):
     database = psycopg2.connect("dbname = news")
     curs = database.cursor()
     return database, curs
 
 if __name__ == '__main__':
-    mess = ["3 most popular articles of all time:","\nmost popular article authors of all time:","\nDays with more than 1% of requests leading to errors:"]
-    func = [ pop_article, pop_author, err]
+    mess = ["3 most popular articles of all time:",
+            "\nmost popular article authors of all time:",
+            "\nDays with more than 1% of requests leading to errors:"]
+    func = [pop_article, pop_author, err]
     j = 0
     for i in mess:
         print(i)
