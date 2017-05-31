@@ -4,7 +4,7 @@ This project requires a virtual environment.
 
 To get this environment we have to install Vagrant and Virtual Machine on our System.
 
-lop_pro.py is the python code which deals with the database 
+lop_pro.py is the python code which deals with the database querries and provides the desired output.
 
 Steps for setup of the virtual environment
 
@@ -22,8 +22,6 @@ Step 6: $ psql -d news -f newsdata.sql
 
 Running the project:
 
-Step 7: $ python log.py
+Step 7: $ python log_pro.py
 
-Step 8: Open your browser and go to the localhost:8000
-
-Step 9: Click the button to get te=he desired output
+Step 8: You will get the desired output.
