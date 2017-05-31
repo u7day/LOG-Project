@@ -4,7 +4,7 @@ This project requires a virtual environment.
 
 To get this environment we have to install Vagrant and Virtual Machine on our System.
 
-lop_pro.py is the python code which deals with the database querries and provides the desired output.
+log_pro.py is the python code which deals with the database querries and provides the desired output.
 
 Steps for setup of the virtual environment
 
